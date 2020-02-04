@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Icons, IconButton } from '@storybook/components'
+import { STORY_CHANGED } from '@storybook/core-events'
 
 export class Tool extends Component {
   static propTypes = {
@@ -32,18 +33,19 @@ export class Tool extends Component {
   componentDidMount() {
     const { channel } = this.props
 
-    channel.on('pulse/check-status', () => {
-      channel.emit('pulse/change-mode', this.state.mode)
-    })
+    // channel.on('pulse/reset', () => {
+    //   this.setState('paused', () =>
+    //     this.channel.emit('pulse/change-mode', 'paused')
+    //   )
+    // })
+
+    channel.on(STORY_CHANGED, () => this.setMode('paused'))
   }
 
-  setMode() {
-    this.setState(
-      { mode: this.state.mode === 'paused' ? 'playing' : 'paused' },
-      () => {
-        this.props.channel.emit('pulse/change-mode', this.state.mode)
-      }
-    )
+  setMode(mode) {
+    this.setState({ mode }, () => {
+      this.props.channel.emit('pulse/change-mode', mode)
+    })
   }
 
   render() {
@@ -51,7 +53,9 @@ export class Tool extends Component {
       <IconButton
         key="control"
         title={this.state.mode === 'paused' ? 'Play' : 'Pause'}
-        onClick={this.setMode}
+        onClick={() =>
+          this.setMode(this.state.mode === 'paused' ? 'playing' : 'paused')
+        }
         mode={this.state.mode}
       >
         <Icons icon={this.state.mode === 'paused' ? 'arrowright' : 'cross'} />
