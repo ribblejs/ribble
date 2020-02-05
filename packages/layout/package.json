@@ -39,7 +39,7 @@
     "@storybook/react": "^5.3.12",
     "@theme-ui/preset-base": "^0.3.0",
     "@theme-ui/preset-funk": "^0.3.0",
-    "@utilz/dummy": "^0.1.7",
+    "@utilz/dummy": "^0.1.8",
     "babel-jest": "^25.1.0",
     "babel-loader": "^8.0.6",
     "faker": "^4.1.0",

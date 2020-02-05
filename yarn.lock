@@ -3488,10 +3488,10 @@
     "@utilz/types" "^0.1.11"
     deepmerge "^4.2.2"
 
-"@utilz/dummy@^0.1.7":
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/@utilz/dummy/-/dummy-0.1.7.tgz#6f59ae16f618b174bfcb083b4f7f279b5b8e8a69"
-  integrity sha512-pJqyDsIfkGo9/4vI6Bcy6JZHVF6prC6OyjtJZSZbEldhTN4nx9tOGi2KFZZ1+v/t7835S2bTUlZ//P1HvUxssQ==
+"@utilz/dummy@^0.1.8":
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/@utilz/dummy/-/dummy-0.1.8.tgz#e92c9cfc087674b77232f30706886fdbdc96dab4"
+  integrity sha512-N37rSmQVgFnODDFIR5c/p1hEhMwYvm8A4sb79erTA3N/apXN1AwItreIJdaMWGE3au1pbIwFepgAPOSAvC80dw==
   dependencies:
     "@utilz/deepmerge" "^0.1.13"
     "@utilz/types" "^0.1.11"

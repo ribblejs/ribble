@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, Styled, Box } from 'theme-ui'
 import { Sidebar } from './Sidebar'
-import { text, paragraphs } from '@utilz/dummy'
+import { textReact, paragraphs } from '@utilz/dummy'
 
 export default {
   title: 'Sidebar',
@@ -30,15 +30,15 @@ const defaultProps = {
   sidebarWidth: '20rem',
   sidebar: (
     <Padded title="Sidebar" color="#eee">
-      {text(paragraphs(20, 50)).map(props => (
-        <Styled.p key={props.id} {...props} />
+      {textReact(paragraphs(20, 50)).map(p => (
+        <Styled.p {...p} />
       ))}
     </Padded>
   ),
   main: (
     <Padded title="Main" color="#e0e0e0">
-      {text(paragraphs(100, 150)).map(props => (
-        <Styled.p key={props.id} {...props} />
+      {textReact(paragraphs(100, 150)).map(p => (
+        <Styled.p {...p} />
       ))}
     </Padded>
   ),
