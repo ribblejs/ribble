@@ -14,18 +14,6 @@ const Padded = ({ title, children, color }) => (
   </Box>
 )
 
-const PlayIcon = () => (
-  <svg viewBox="0 0 10 10" focusable="false">
-    <path d="M1,0 10,5 1,10"></path>
-  </svg>
-)
-
-const PauseIcon = () => (
-  <svg viewBox="0 0 10 10" focusable="false">
-    <path d="M0,0 0,10 3,10 3,0 M7,0 7,10 10,10 10,0"></path>
-  </svg>
-)
-
 const defaultProps = {
   sidebarWidth: '20rem',
   sidebar: (
